@@ -110,18 +110,6 @@ function App() {
         )}
       </div>
       
-      {/*
-      <div className="card">
-        <h1>UV Index</h1>
-        {uviData ? (
-          <div>
-            <p className="uvi-info">UV Index: {uviData.uvi}</p>
-          </div>
-        ) : (
-          <p>Loading UV Index data...</p>
-        )}
-      </div>
-        */}
     </div>
   );
 }
