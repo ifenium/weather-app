@@ -17,10 +17,10 @@
   margin: 20px;
 }
 
-h1 {
+h2 {
   margin-bottom: 20px;
   text-align: center;
-  color: #333;
+  color: #499634;
 }
 
 .weather-info {
@@ -46,13 +46,32 @@ h1 {
 
 }
 
-.upload{
+.upload {
   width:50px;
   padding-left:120px;
+}
+.container {
+  display: flex;
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center; /* Align children horizontally at the center */
 }
 
 h3{
   margin-bottom: 20px;
   text-align: center;
-  color: #333;
+  color: #499634;
 }
+
+.Iframe1 {
+  position: relative;
+  margin-top: 20px; /* Add some spacing between the cards and the Iframe */
+  
+}
+
+.Iframe1 iframe{
+  width: 600px;
+  height: 350px; /* Adjust the height as per your requirement */
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+

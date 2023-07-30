@@ -59,57 +59,63 @@ function App() {
 
   return (
     <div className="App">
-      <div className='card'>
-        <h1>Plant Leaf Image Classifier</h1>
-        <a href="https://rexsimiloluwah.github.io/PLANT-DISEASE-CLASSIFIER-WEB-APP-TENSORFLOWJS/" className="card-link" target="_blank" rel="noopener noreferrer">
-          <img className='upload' src={`${process.env.PUBLIC_URL}/Vector.png`} alt="Upload"/>
-        </a>
-        <h3>Upload Image</h3>
+      <div className="container">
+        <div className='card'>
+          <h2>Plant Leaf Image Classifier</h2>
+          <a href="https://rexsimiloluwah.github.io/PLANT-DISEASE-CLASSIFIER-WEB-APP-TENSORFLOWJS/" className="card-link" target="_blank" rel="noopener noreferrer">
+            <img className='upload' src={`${process.env.PUBLIC_URL}/Vector.png`} alt="Upload"/>
+          </a>
+          <h3>Upload Image</h3>
+        </div>
+        <div className="card">
+          <h2>Weather Data</h2>
+          {weatherData ? (
+            <div>
+              <p className="weather-info">Temperature: {weatherData.main.temp.toFixed(2)}°C</p>
+              <p className="weather-info">Humidity: {weatherData.main.humidity}%</p>
+              <p className="weather-info">Pressure: {weatherData.main.pressure} hPa</p>
+              <p className="weather-info">Weather Description: {weatherData.weather[0].description}</p>
+              <p className="uvi-info">UV Index: {uviData.uvi}</p>
+            </div>
+          ) : (
+            <p>Loading weather data...</p>
+          )}
+        </div>
+        <div className="logo-container">
+          <img src={`${process.env.PUBLIC_URL}/Logo.png`} alt="Logo" className="logo" />
+        </div>
+        <div className="card">
+          <h2>Soil data</h2>
+          {soilData ? (
+            <div>
+              <p className="soil-info">Temperature at the surface: {(soilData.t0-273).toFixed(2)}°C</p>
+              <p className="soil-info">Temperature at the depth of 10 cm: {(soilData.t10-273).toFixed(2)}°C</p>
+              <p className="soil-info">Moisture Level(m3/m3): {(soilData.moisture*100).toFixed(2)}%</p>
+            </div>
+          ) : (
+            <p>Loading soil data...</p>
+          )}
+        </div>
+        <div className="card">
+          <h2>Historical NDVI Data</h2>
+          {ndviData ? (
+            <div>
+              {ndviData.map((data, index) => (
+                <p key={index} className="ndvi-info">
+                  Date: {new Date(data.dt * 1000).toLocaleDateString()}, NDVI Value: {data.ndvi.toFixed(2)}
+                </p>
+              ))}
+            </div>
+          ) : (
+            <p>Loading historical NDVI data...</p>
+          )}
+        </div>
       </div>
-      <div className="card">
-        <h1>Weather Data</h1>
-        {weatherData ? (
-          <div>
-            <p className="weather-info">Temperature: {weatherData.main.temp.toFixed(2)}°C</p>
-            <p className="weather-info">Humidity: {weatherData.main.humidity}%</p>
-            <p className="weather-info">Pressure: {weatherData.main.pressure} hPa</p>
-            <p className="weather-info">Weather Description: {weatherData.weather[0].description}</p>
-            <p className="uvi-info">UV Index: {uviData.uvi}</p>
-          </div>
-        ) : (
-          <p>Loading weather data...</p>
-        )}
+      <div className='Iframe1'>
+        <iframe height="400" width='300'src="https://industrial.ubidots.com/app/dashboards/public/widget/vaOSciU2d3k-cE-83PcycLPaDIf0qHXnsvX2soeFE74?embed=true"></iframe>
+        <iframe height="400" width="700" src="https://industrial.ubidots.com/app/dashboards/public/widget/cX7sJ8cCAvcLludFGflwj0XRXGtu6UHNK3cWCwK6bYI?embed=true"></iframe>
+        <iframe width="100%" height="796" frameborder="0" src="https://industrial.ubidots.com/app/dashboards/public/widget/PaxmCU4WXn3aDdf__kgyHmp_hS29beseUhWjoWgqI18?embed=true"></iframe>
       </div>
-      <div className="logo-container">
-        <img src={`${process.env.PUBLIC_URL}/Logo.png`} alt="Logo" className="logo" />
-      </div>
-      <div className="card">
-        <h1>Soil data</h1>
-        {soilData ? (
-          <div>
-            <p className="soil-info">Temperature at the surface: {(soilData.t0-273).toFixed(2)}°C</p>
-            <p className="soil-info">Temperature at the depth of 10 cm: {(soilData.t10-273).toFixed(2)}°C</p>
-            <p className="soil-info">Moisture (m3/m3): {(soilData.moisture*100).toFixed(2)}%</p>
-          </div>
-        ) : (
-          <p>Loading soil data...</p>
-        )}
-      </div>
-      <div className="card">
-        <h1>Historical NDVI Data</h1>
-        {ndviData ? (
-          <div>
-            {ndviData.map((data, index) => (
-              <p key={index} className="ndvi-info">
-                Date: {new Date(data.dt * 1000).toLocaleDateString()}, NDVI Value: {data.ndvi.toFixed(2)}
-              </p>
-            ))}
-          </div>
-        ) : (
-          <p>Loading historical NDVI data...</p>
-        )}
-      </div>
-      
     </div>
   );
 }
