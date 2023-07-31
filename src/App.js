@@ -112,9 +112,11 @@ function App() {
         </div>
       </div>
       <div className='Iframe1'>
-        <iframe height="400" width='300'src="https://industrial.ubidots.com/app/dashboards/public/widget/vaOSciU2d3k-cE-83PcycLPaDIf0qHXnsvX2soeFE74?embed=true"></iframe>
-        <iframe height="400" width="700" src="https://industrial.ubidots.com/app/dashboards/public/widget/cX7sJ8cCAvcLludFGflwj0XRXGtu6UHNK3cWCwK6bYI?embed=true"></iframe>
-        <iframe width="100%" height="796" frameborder="0" src="https://industrial.ubidots.com/app/dashboards/public/widget/PaxmCU4WXn3aDdf__kgyHmp_hS29beseUhWjoWgqI18?embed=true"></iframe>
+        <iframe title="Current Temperature" height="400" width='300'src="https://industrial.ubidots.com/app/dashboards/public/widget/vaOSciU2d3k-cE-83PcycLPaDIf0qHXnsvX2soeFE74?embed=true"></iframe>
+        <iframe title="Temperature Past 24 hours" height="400" width="700" src="https://industrial.ubidots.com/app/dashboards/public/widget/cX7sJ8cCAvcLludFGflwj0XRXGtu6UHNK3cWCwK6bYI?embed=true"></iframe>
+        <iframe title="Relative Humidity (Past 1 Hour)" width="100%" height="796" src="https://industrial.ubidots.com/app/dashboards/public/widget/PaxmCU4WXn3aDdf__kgyHmp_hS29beseUhWjoWgqI18?embed=true"></iframe>
+        <iframe title = "Soil Moisture % (Past 24 Hours)"width="100%" height="796" src="https://industrial.ubidots.com/app/dashboards/public/widget/3sb8vncl14G39GjwJ_qs4XoK033WYmN1D_5aC_ZG2FA?from=1690653920529&to=1690740320529&datePicker=true&embed=true"></iframe>
+        <iframe title = "Current Soil Moisture" width="100%" height="796" src="https://industrial.ubidots.com/app/dashboards/public/widget/BSkJTfgJwa0XhwgOVFgxqlKfP2_g0k46qKGxGCzWgHk?embed=true"></iframe>
       </div>
     </div>
   );
