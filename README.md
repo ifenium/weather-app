@@ -67,19 +67,19 @@ The app will be available at [http://localhost:3000](http://localhost:3000).
    - Navigate to the plant disease detection section.
    - Upload an image of a plant leaf to detect possible diseases using the integrated classifier.
 
-## File Structure
+## Demonstration
 
-\`\`\`sh
-weather-app/
-├── public/                 # Public files
-├── src/                    # Source files
-│   ├── components/         # React components
-│   ├── App.js              # Main App component
-│   ├── index.js            # Entry point
-│   └── ...                 # Other source files
-├── .gitignore              # Git ignore file
-├── package-lock.json       # Package lock file
-├── package.json            # Package configuration
-└── README.md               # This readme file
-\`\`\`
+### Sensor Values Upload
+
+![Sensor Values Upload](path/to/your/sensor-values-upload-image.jpg)
+
+### Trigger Alerts
+
+![Trigger Alerts](path/to/your/trigger-alerts-image.jpg)
+
+### Dashboard and Disease Detection
+
+[![Dashboard and Disease Detection](path/to/your/dashboard-image.jpg)](path/to/your/video.mp4)
+
+*Click the image above to watch the video demonstration.*
 
