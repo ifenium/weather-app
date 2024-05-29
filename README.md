@@ -71,11 +71,11 @@ The app will be available at [http://localhost:3000](http://localhost:3000).
 
 ### Sensor Values Upload
 
-![Sensor Values Upload](media/sensor-values-upload-image.jpg)
+![Sensor Values Upload](media/sensor-values-upload.jpg)
 
 ### Trigger Alerts
 
-![Trigger Alerts](media/trigger-alerts-image.jpg)
+![Trigger Alerts](media/trigger-alerts.jpg)
 
 ### Dashboard and Disease Detection
 
