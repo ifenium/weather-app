@@ -14,42 +14,41 @@ This is a simple React app that collates soil temperature, humidity, and moistur
 
 - Node.js
 - React
-- Ubidots account
-- AgroMonitoring API key
-- TensorFlow.js
+- Ubidots account (https://ubidots.com/)
+- AgroMonitoring API key (https://agromonitoring.com/api/get)
 - Plant Disease Classifier from [PLANT-DISEASE-CLASSIFIER-WEB-APP-TENSORFLOWJS](https://github.com/rexsimiloluwah/PLANT-DISEASE-CLASSIFIER-WEB-APP-TENSORFLOWJS)
 
 ## Installation
 
 1. Clone the repository:
 
-    \`\`\`sh
+    ```
     git clone https://github.com/yourusername/weather-app.git
     cd weather-app
-    \`\`\`
+    ```
 
 2. Install the dependencies:
 
-    \`\`\`sh
+    ```
     npm install
-    \`\`\`
+    ```
 
 3. Set up your environment variables:
 
     Create a \`.env\` file in the root directory and add the following:
 
-    \`\`\`sh
+    ```
     REACT_APP_UBIDOTS_API_KEY=your_ubidots_api_key
     REACT_APP_AGROMONITORING_API_KEY=your_agromonitoring_api_key
-    \`\`\`
+    ```
 
 ## Running the App
 
 To start the development server:
 
-\`\`\`sh
+```
 npm start
-\`\`\`
+```
 
 The app will be available at [http://localhost:3000](http://localhost:3000).
 
